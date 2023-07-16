@@ -1,11 +1,12 @@
 /* css files add styling rules to your content */
-body,html {
+body,
+html {
   background: #ffffff;
   margin: 0em;
   padding: 0;
   position: relative;
-  font-family: 'Noto Sans', sans-serif;
-  font-family: 'Overpass', sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Overpass", sans-serif;
 }
 p,
 label,
@@ -14,16 +15,13 @@ h2,
 h3,
 h4,
 h5,
-a{
-  font-family: 'Noto Sans', sans-serif;
-  font-family: 'Overpass', sans-serif;
+a {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Overpass", sans-serif;
 
-.container {
-  max-width: 700px;
-}
-
-
-
+  .container {
+    max-width: 700px;
+  }
 }
 header {
   position: fixed;
@@ -57,7 +55,7 @@ header {
 }
 
 header.abajo {
-  background:#fff ;
+  background: #fff;
   padding: 45px 10px;
 }
 
@@ -71,7 +69,7 @@ nav {
   justify-content: space-between;
 }
 
-nav ul{
+nav ul {
   list-style: none;
   display: flex;
   margin-right: 1px;
@@ -82,7 +80,7 @@ nav ul li:not(:last-child) {
   margin-right: 50px;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -117,7 +115,7 @@ header ul li a {
   border-radius: 20px;
 }
 
-header .logo{
+header .logo {
   position: relative;
   color: white;
   text-decoration: none;
@@ -128,20 +126,18 @@ header .logo{
   right: 164px;
 }
 
-header.abajo  .logo,
-header.abajo ul li a{
+header.abajo .logo,
+header.abajo ul li a {
   color: #000;
 }
 
-header ul li a:hover ,
+header ul li a:hover,
 header ul li a.active {
   background: rgb(0, 255, 234);
   padding: 20px;
-  
 }
 
-
-.casa img{
+.casa img {
   width: 75vw;
   max-width: 1100px;
   min-width: 320px;
@@ -149,83 +145,70 @@ header ul li a.active {
 }
 
 article {
-    position: relative;
-    width: 250px;
-    transition: all .3s ease;
-    
+  position: relative;
+  width: 250px;
+  transition: all 0.3s ease;
 }
 
-article img:first-child{
-    box-shadow: 0 60px 60px -60px rgba( 0, 30, 255, 0.5);
-    border-radius: 4px;
-    object-fit: cover;
-    width: 100%;
+article img:first-child {
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
 }
 
 article img:last-child {
-    position: absolute;
-    width: 200px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateY(25%);
-    transition: .3s ease;
-    opacity: 0;
-    
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
 }
 
 article:hover {
-    transform: 
-    perspective(250px)
-    rotateX(10deg)
-    translateY(-5%)
-    translateZ(0);
-    
-
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
 }
 
-article::before{    
-content: '';
-position: absolute;
-bottom: 0;
-height: 100%;
-width: 100%;
-background-image:
-linear-gradient(
-        to bottom, 
-        transparent 10%,
-        rgba(0, 0, 0, 0.5) 50%,
-        rgba(0,0,0) 95% 
-    );
-    opacity: 0;
-    transition: all .3s ease;
-    
+article::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0) 95%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 article:hover::before {
-    opacity: 1;
-    filter: blur(2px);
+  opacity: 1;
+  filter: blur(2px);
 }
 
-article:hover img:first-child{
-    opacity: 1;
-    transform: translateY(10%);
-    filter: blur(2px);
+article:hover img:first-child {
+  opacity: 1;
+  transform: translateY(10%);
+  filter: blur(2px);
 }
 
-article:hover img:last-child{
-    opacity: 1;
-    transform: translateY(10%);
-    
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
 }
 
-
-.h1s{
-  margin-block-end: 0em;  
+.h1s {
+  margin-block-end: 0em;
   margin-block-start: 8em;
   color: white;
-  
 }
 
 nav {
@@ -237,15 +220,15 @@ nav {
   display: grid;
   gap: 1.5em;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1ft));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1ft));
 }
 
-.nav__title{
+.nav__title {
   margin: 0 auto;
   background-color: white;
 }
 
-.nav__list{
+.nav__list {
   padding: 0;
   list-style: none;
   margin: 0 auto;
@@ -255,7 +238,7 @@ nav {
   gap: 2.5em;
 }
 
-.nav__link{
+.nav__link {
   color: #efefef;
   text-decoration: none;
   font-weight: normal;
@@ -267,13 +250,14 @@ a {
   background-color: transparent;
 }
 
-@media (min-width:693px) {
-  .nav__title, .nav__list{
+@media (min-width: 693px) {
+  .nav__title,
+  .nav__list {
     margin: unset;
   }
 }
 
-.btn-neon{
+.btn-neon {
   position: relative;
   display: inline-block;
   padding: 17px 30px;
@@ -286,88 +270,89 @@ a {
   text-decoration: none;
   margin-block-start: 1em;
 }
-.btn-neon:hover{
+.btn-neon:hover {
   background: rgb(229, 255, 0);
-  box-shadow: 0 0 10px rgb(229, 255, 0), 0 0 40px rgb(229, 255, 0), 0 0 80px rgb(229, 255, 0);
+  box-shadow: 0 0 10px rgb(229, 255, 0), 0 0 40px rgb(229, 255, 0),
+    0 0 80px rgb(229, 255, 0);
   transition-delay: 1s;
   text-decoration: none;
   color: black;
 }
-.btn-neon span{
+.btn-neon span {
   position: absolute;
   display: block;
   text-decoration: none;
 }
-#span1{
+#span1 {
   top: 0;
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent,rgb(229, 255, 0));
-  text-decoration:none ;
+  background: linear-gradient(90deg, transparent, rgb(229, 255, 0));
+  text-decoration: none;
 }
-.btn-neon:hover #span1{
+.btn-neon:hover #span1 {
   left: 100%;
   transition: 1s;
   text-decoration: none;
 }
-#span3{
+#span3 {
   bottom: 0;
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent,rgb(229, 255, 0));
+  background: linear-gradient(270deg, transparent, rgb(229, 255, 0));
   text-decoration: none;
 }
-.btn-neon:hover #span3{
+.btn-neon:hover #span3 {
   right: 100%;
   transition: 1s;
   transition-delay: 0.5s;
   text-decoration: none;
 }
-#span2{
+#span2 {
   top: -100%;
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg,transparent,rgb(229, 255, 0));
+  background: linear-gradient(180deg, transparent, rgb(229, 255, 0));
   text-decoration: none;
 }
-.btn-neon:hover #span2{
+.btn-neon:hover #span2 {
   top: 100%;
   transition: 1s;
   transition-delay: 0.25s;
   text-decoration: none;
 }
-#span4{
+#span4 {
   bottom: -100%;
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg,transparent,rgb(229, 255, 0));
+  background: linear-gradient(360deg, transparent, rgb(229, 255, 0));
   text-decoration: none;
 }
-.btn-neon:hover #span4{
+.btn-neon:hover #span4 {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
   text-decoration: none;
 }
 
-.product-stripe img{
+.product-stripe img {
   width: 100%;
   height: 100%;
   justify-content: center;
 }
 
-.login{
+.login {
   width: 100px;
   background: #24303c;
   padding: 30px;
   margin: auto;
   margin-top: 100px;
   border-radius: 4px;
-  font-family: 'calibri';
+  font-family: "calibri";
   color: white;
   box-shadow: 7px 13px 37px #3f3f3f;
 }
@@ -384,7 +369,7 @@ a {
   border-radius: 4px;
   margin-bottom: 16px;
   border: 1px solid #645b5b;
-  font-family: 'calibri';
+  font-family: "calibri";
   font-size: 18px;
   color: rgb(0, 0, 0);
 }
@@ -416,8 +401,7 @@ a {
   font-size: 16px;
 }
 
-
-.zona1{
+.zona1 {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -444,24 +428,22 @@ a {
   min-height: 10rem;
 }
 
-.mb5{
+.mb5 {
   margin-top: 5rem;
 }
 
-.mt-5{
+.mt-5 {
   margin-top: 3rem;
 }
 
-@media (min-width: 1200px){
-    
+@media (min-width: 1200px) {
 }
 
-@keyframes mover{
-  0%{
-      transform: translate(100%);
+@keyframes mover {
+  0% {
+    transform: translate(100%);
   }
 }
-
 
 .product-stripe {
   overflow-x: scroll;
@@ -532,14 +514,14 @@ a {
   margin-bottom: 10px;
 }
 
-:root{
+:root {
   --facebook: #3b5999;
-  --instagram:#e4405f;
-  --twitter:#55acee;
-  --youtube:#bd081c;
+  --instagram: #e4405f;
+  --twitter: #55acee;
+  --youtube: #bd081c;
 }
 
-.redes-container{
+.redes-container {
   display: flex;
   height: 100;
   align-items: center;
@@ -554,40 +536,40 @@ a {
   text-align: center;
 }
 
-.redes-container ul li a{
+.redes-container ul li a {
   display: block;
   padding: 0 10px;
   background: #333;
   color: #fff;
   line-height: 50px;
   font-size: 18px;
-  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
-  transition: .2s;
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
 }
 
-.redes-container ul:hover a{
+.redes-container ul:hover a {
   filter: blur(2px);
 }
 
-.redes-container ul li a:hover{
+.redes-container ul li a:hover {
   transform: translate(-3px) scale(1.05);
-  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
   filter: none;
 }
 
-.redes-container ul li .facebook:hover{
+.redes-container ul li .facebook:hover {
   background: var(--facebook);
 }
 
-.redes-container ul li .instagram:hover{
+.redes-container ul li .instagram:hover {
   background: var(--instagram);
 }
 
-.redes-container ul li .twitter:hover{
+.redes-container ul li .twitter:hover {
   background: var(--twitter);
 }
 
-.redes-container ul li .youtube:hover{
+.redes-container ul li .youtube:hover {
   background: var(--youtube);
 }
 
@@ -595,7 +577,7 @@ a {
   background-color: #343a40;
   padding: 15px 10px;
   text-align: center;
-  color:white;  
+  color: white;
 }
 .pie-pagina .grupo-2 small {
   font-size: 15px;
@@ -608,4 +590,5 @@ a {
     padding: 35px 0px;
   }
 }
+
 
